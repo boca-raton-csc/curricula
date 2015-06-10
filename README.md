@@ -1,4 +1,5 @@
 # Curricula
+This is curricula and accompanying presentations designed to be used by the Boca Raton Community Highschool's Computer Science Club. While written in HTML, these presentations are not designed to be read, but rather presented with elaboration in a forum like classroom where the audience has the opportunity to ask questions and interact.
 
 ## Outline
 - World Wide Web
