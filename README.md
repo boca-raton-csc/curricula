@@ -4,6 +4,9 @@
 - World Wide Web
   - Introduction
   - Web Cake
+  - HTML
+  - CSS
+  - JavaScript
 
 ## Contributing
 All curricula is to be written in HTML, CSS, and JavaScript. No preprocessors. No servers. The curricula must also be instantly readable when opening in any browser. This is so that beginners can look through the code and understand how it works. Also so that it runs *anywhere* (even school computers).
