@@ -48,6 +48,42 @@
         <li><code>$ git config --global user.name "real name"</code></li>
         <li><code>$ git config --global user.email "me@example.com"</code></li>
       </ul>
+
+      <h2>Creating Your Git Repository</h2>
+      <ul>
+        <li><code>git init .</code> will create a hidden git repository in your working directory</li>
+        <li>You can peak at the .git directory using <code>ls -1p .git</code></li>
+      </ul>
+
+    </div>
+
+    <div class="git-basics">
+      <h2>Git Ignore</h2>
+      <ul>
+        <li>
+          <p>
+            Not every file should be included in a snapshot using git, such as:
+          </p>
+          <ul>
+            <li>log files created by the web server database files config</li>
+            <li>files that contain passwords or API keys</li>
+          </ul>
+        </li>
+
+        <li><strong>.gitignore</strong> files can specify a list of files that are never seen by Git</li>
+      </ul>
+    </div>
+
+    <div class="workflow">
+
+      <h2>Git Workflow</h2>
+      <ul>
+        <li>Untracked</li>
+        <li>Staged</li>
+        <li>Commited</li>
+        <li>Pushing to Github</li>
+      </ul>
+
     </div>
 
   </body>
