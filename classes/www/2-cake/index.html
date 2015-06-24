@@ -2,20 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>World Wide Web&mdash;Web Cake</title>
-    <link rel="stylesheet" href="../../lib/styles/index.css">
-    <script src="../../lib/styles/index.js"></script>
+    <title>World Wide Web&mdash;A Tasty Cake</title>
+    <link rel="stylesheet" href="../../../lib/styles/index.css">
+    <script async src="../../../lib/scripts/index.js"></script>
   </head>
   <body>
 
     <div class="slide">
-      <h1>Welcome to the Web&mdash;Cake</h1>
+      <h1>Welcome to the Web&mdash;A Tasty Cake</h1>
     </div>
 
     <div class="slide">
       <h2>The Web is a Platform</h2>
 
-      <p>There is not one programming language that makes up the web. Rather a collection of different technologies.</p>
+      <p>There is <em>not one programming language</em> that makes up the web. Rather a collection of different technologies. Primarily, but not exclusively:</p>
 
       <ul>
         <li>HTML: content</li>
@@ -27,9 +27,151 @@
     <div class="slide">
       <h2>Advantages</h2>
 
-      <p>This allows developers to seperate concerns. It also allows developers to specialize in what they enjoy.</p>
+      <p>This allows developers to seperate concerns and specialize in what they enjoy.</p>
 
       <img src="images/html-css-js.png" alt="The HTML, CSS, and JavaScript logos"/>
+    </div>
+
+    <div class="slide">
+      <h2>HTML</h2>
+
+      <p>HTML is boring. It's drab and grey like concrete. However, also like concrete HTML is the most important part of what you build because it is the foundation.</p>
+
+      <p>Good HTML means good <em>everything else</em>.</p>
+
+      <pre>
+&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    Content
+  &lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+    </div>
+
+    <div class="slide">
+      <h2>CSS</h2>
+
+      <p>CSS is <em>very</em> tricky to master, it drives many people insane.</p>
+
+      <p>CSS is what makes pages look pretty. It adds color, sizing, does layout and much much more. CSS is tricky because for every single thing it does it has 5+ rules <em>you</em> need to learn and know inside and out to do it right.</p>
+
+      <p>Luckily there are people crazy enough to write CSS for us, for most of this course we will use there work.</p>
+
+      <pre>
+body {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin: 1rem 0;
+  padding: 1rem;
+  width: 80vw;
+  min-width: 200px;
+  max-width: 5000px;
+  background-color: tomato;
+  color: white;
+  font-family: "Comic Sans", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.2ch;
+  text-align: justify;
+}
+      </pre>
+
+      <aside>If you want to learn CSS we will be excited to teach you, our worry is that the majority of people don't want/need CSS knowledge.</aside>
+    </div>
+
+    <div class="slide">
+      <h2>JavaScript</h2>
+
+      <p>Fun fact: JavaScript was created in a week! And then perfected over the next 10+ years and on until today.</p>
+
+      <p>JavaScript is the programming language of the web. It is a truly object oriented weak typed programming language with prototypal inheritance (although classical inheritance can be emulated and is implemented in ES6).</p>
+
+      <p>The word JavaScript is synonymous with ECMAScript. We will be teaching ES5 (ECMAScript 5), even though ES6 and ES7 are the cutting edge of JavaScript development they have not been implemented fully by all major browsers.</p>
+
+      <pre>
+window.onload = function () {
+  (function () {
+    // Select all elements with our utility class
+    var nodes = document.getElementsByClassName('svg-strech');
+
+    // Iterate through all the nodes
+    for (var i = 0, max = nodes.length; i < max ; i++) {
+      // Select the node at this index
+      var node = nodes.item(i);
+
+      // Get the parent node
+      var parentNode = node.parentNode;
+
+      // Get the node bounding boxes
+      var bb = node.getBBox();
+      var parentBb = node.parentNode.getBBox();
+
+      ...
+      </pre>
+    </div>
+
+    <div class="slide">
+      <h3>A Case for JavaScript</h3>
+
+      <p>If you have any programming experience you might not be excited to here we will be teaching JavaScript. Here is why we chose JavaScript:</p>
+
+      <ul>
+        <li>Can run no matter the operating system as long as a browser is installed (it's the only programming language of the front end web)</li>
+        <li>Everything is an object</li>
+        <li>Asynchronous concepts very valuable to understand</li>
+        <li>Can emulate syntaxes from many languages (can even create custom syntaxes if macros are implemented in ES7)</li>
+        <li>Weak typed programming languages are typically easier for beginners</li>
+        <li>Constantly being updated (ES6, ES7)</li>
+        <li>Node.js is awesome</li>
+        <li><strong>HUGE</strong> community of open source libraries (NPM)</li>
+        <li>It's fun (our opinion)</li>
+      </ul>
+
+      <p>Most importantly we will be teaching you how to <em>think</em> like a computer scientist. After that go and learn whatever language you want.</p>
+    </div>
+
+    <div class="slide">
+      <h2>Client code</h2>
+
+      <p>HTML, CSS, and JavaScript are the files that get rendered in the browser, the "<em>client</em>".</p>
+
+      <p>Because they are sent to your browser, anyone can see the code you write. Let's go to <a href="https://www.google.com/?gws_rd=ssl#q=the+computer+science+club+is+awesome!">Google</a> and click inspect element.</p>
+
+      <p>View the source with whatever browser you are using, it is completely transparent!</p>
+    </div>
+
+    <div class="slide">
+      <h2>Server code</h2>
+
+      <p>Because anyone can see your "client" code, it is not secure. Anyone can change any value anytime. The changes just won't be permanent.</p>
+
+      <p>People can't see your server side code however.</p>
+
+      <img src="images/html.jpg" alt="Some HTML code"/>
+    </div>
+
+    <div class="slide">
+      <h3>Server as a Waiter</h3>
+
+      <p>Imagine the server as your waiter at a resturaunt. The server is what gives you your "cake".</p>
+
+      <p>The client (browser) and the server communicate through another web technology HTTP.</p>
+    </div>
+
+    <div class="slide">
+      <h2>Put it all together...</h2>
+
+      <ul>
+        <li><em>I click another cat link (<code>http://cats.cats/cute/kitten</code>)...</em></li>
+        <li>The browser makes an <strong>HTTP</strong> request to the <strong>Server</strong> living at <code>http://cats.cats/cute/kitten</code></li>
+        <li>The <strong>Server</strong> sends an <strong>HTTP</strong> response <em>back</em> to the browser with the <strong>HTML</strong> of the page</li>
+        <li>The <strong>HTML</strong> is recieved by the browser and parsed</li>
+        <li>Links to the <strong>CSS</strong> (<code>http://cats.com/styles.css</code>) and <strong>Javascript</strong> (<code>http://cats.com/scripts.js</code>) in the <strong>HTML</strong> are retrieved through more <strong>HTTP</strong> requests to the <strong>Server</strong></li>
+        <li>The <strong>CSS</strong> is applied to the <strong>HTML</strong> making the page look pretty</li>
+        <li>The <strong>JavaScript</strong> is executed on the <strong>HTML</strong> page, giving it functionality and making the cats go "<em>Meow!</em>"</li>
+      </ul>
     </div>
 
   </body>
