@@ -33,15 +33,18 @@
     </div>
 
     <div class="slide">
-      <h2>HTML</h2>
+      <h2>HTML: Hypertext Markup Language</h2>
 
       <p>HTML is boring. It's drab and grey like concrete. However, also like concrete HTML is the most important part of what you build because it is the foundation.</p>
 
-      <p>Good HTML means good <em>everything else</em>.</p>
+      <p>Without good HTML it is <em>very hard to get everything else right</em>.</p>
 
       <pre>
 &lt;html&gt;
-  &lt;head&gt;&lt;/head&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;script src="script.css"&gt;&lt;/script&gt;
+  &lt;/head&gt;
   &lt;body&gt;
     Content
   &lt;/body&gt;
@@ -50,13 +53,13 @@
     </div>
 
     <div class="slide">
-      <h2>CSS</h2>
+      <h2>CSS: Cascading Style Sheets</h2>
 
-      <p>CSS is <em>very</em> tricky to master, it drives many people insane.</p>
+      <p>CSS is easy to learn, but <em>very</em> hard to master.</p>
 
-      <p>CSS is what makes pages look pretty. It adds color, sizing, does layout and much much more. CSS is tricky because for every single thing it does it has 5+ rules <em>you</em> need to learn and know inside and out to do it right.</p>
+      <p>CSS is what makes pages look pretty. It adds color, sizing, does layout and much much more. The trickiness is because CSS is a highly declarative language. If you don't have <em>all</em> the declerations memorized and know about their interactions it is hard to wrap your head around.</p>
 
-      <p>Luckily there are people crazy enough to write CSS for us, for most of this course we will use there work.</p>
+      <p>For most of this course we will use open source css libraries that manage our stylesheets for us.</p>
 
       <pre>
 body {
@@ -84,11 +87,9 @@ body {
     <div class="slide">
       <h2>JavaScript</h2>
 
-      <p>Fun fact: JavaScript was created in a week! And then perfected over the next 10+ years and on until today.</p>
+      <p>JavaScript is the programming language of the web. It is an object oriented, weak typed, functional programming language with prototypal inheritance (although classical inheritance can be faked and eventually will be implemented in ES6).</p>
 
-      <p>JavaScript is the programming language of the web. It is a truly object oriented weak typed programming language with prototypal inheritance (although classical inheritance can be emulated and is implemented in ES6).</p>
-
-      <p>The word JavaScript is synonymous with ECMAScript. We will be teaching ES5 (ECMAScript 5), even though ES6 and ES7 are the cutting edge of JavaScript development they have not been implemented fully by all major browsers.</p>
+      <p>The word JavaScript is synonymous with ECMAScript. We will be teaching ES5 (ECMAScript 5). Even though ES6/ES2015 and eventually ES7/ES2016 are the cutting edge of JavaScript development, they do not have good support in major browsers.</p>
 
       <pre>
 window.onload = function () {
@@ -115,37 +116,40 @@ window.onload = function () {
     <div class="slide">
       <h3>A Case for JavaScript</h3>
 
-      <p>If you have any programming experience you might not be excited to here we will be teaching JavaScript. Here is why we chose JavaScript:</p>
+      <p>If you have any programming experience you likely have an opinion about JavaScript. Here is why we chose to teach JavaScript:</p>
 
       <ul>
-        <li>Can run no matter the operating system as long as a browser is installed (it's the only programming language of the front end web)</li>
-        <li>Everything is an object</li>
-        <li>Asynchronous concepts very valuable to understand</li>
-        <li>Can emulate syntaxes from many languages (can even create custom syntaxes if macros are implemented in ES7)</li>
-        <li>Weak typed programming languages are typically easier for beginners</li>
-        <li>Constantly being updated (ES6, ES7)</li>
-        <li>Node.js is awesome</li>
-        <li><strong>HUGE</strong> community of open source libraries (NPM)</li>
-        <li>It's fun (our opinion)</li>
+        <li>JavaScript can run no matter the operating system as long as a browser is installed.</li>
+        <li>Everything is an object.</li>
+        <li>Extremely flexible, can emulate syntaxes from many languages.</li>
+        <li>Weak typed programming languages are typically easier for beginners.</li>
+        <li>Constantly being updated (ES2015, ES2016).</li>
+        <li>Node.js is awesome.</li>
+        <li><strong>HUGE</strong> community of open source libraries (NPM).</li>
+        <li>It's fun (opinion).</li>
       </ul>
 
-      <p>Most importantly we will be teaching you how to <em>think</em> like a computer scientist. After that go and learn whatever language you want.</p>
+      <p>More important then the language, we will be teaching you how to <em>think</em> like a computer scientist. After that you should have the tools to go and learn whatever language you want.</p>
     </div>
 
     <div class="slide">
-      <h2>Client code</h2>
+      <h2>What is This Server Thing All About?</h2>
+    </div>
+
+    <div class="slide">
+      <h3>Client code</h3>
 
       <p>HTML, CSS, and JavaScript are the files that get rendered in the browser, the "<em>client</em>".</p>
 
-      <p>Because they are sent to your browser, anyone can see the code you write. Let's go to <a href="https://www.google.com/?gws_rd=ssl#q=the+computer+science+club+is+awesome!">Google</a> and click inspect element.</p>
+      <p>Because they are sent to your browser, anyone can see the code you write. Go to <a href="https://www.google.com/?gws_rd=ssl#q=the+computer+science+club+is+awesome!">Google</a> and open the DevTools.</p>
 
       <p>View the source with whatever browser you are using, it is completely transparent!</p>
     </div>
 
     <div class="slide">
-      <h2>Server code</h2>
+      <h3>Server code</h3>
 
-      <p>Because anyone can see your "client" code, it is not secure. Anyone can change any value anytime. The changes just won't be permanent.</p>
+      <p>Because anyone can see your "client" code, it is not secure. Anyone can change any value anytime. The changes just won't be seen by anyone else.</p>
 
       <p>People can't see your server side code however.</p>
 
@@ -153,11 +157,36 @@ window.onload = function () {
     </div>
 
     <div class="slide">
-      <h3>Server as a Waiter</h3>
+      <h4>Server as a Waiter</h4>
 
-      <p>Imagine the server as your waiter at a resturaunt. The server is what gives you your "cake".</p>
+      <p>Imagine the server as your waiter at a resturaunt. The server is what gives you your "cake" of files (HTML, CSS, JavaScript).</p>
 
       <p>The client (browser) and the server communicate through another web technology HTTP.</p>
+
+      <h5>HTTP Request</h5>
+      <pre>
+GET https://api.github.com/users/octocat/orgs HTTP/1.1
+      </pre>
+
+      <h5>HTTP Response</h5>
+      <pre>
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 12 Oct 2012 23:33:14 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Status: 200 OK
+ETag: "a00049ba79152d03380c34652f2cb612"
+X-GitHub-Media-Type: github.v3
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4987
+X-RateLimit-Reset: 1350085394
+Content-Length: 5
+Cache-Control: max-age=0, private, must-revalidate
+X-Content-Type-Options: nosniff
+
+...
+      </pre>
     </div>
 
     <div class="slide">
