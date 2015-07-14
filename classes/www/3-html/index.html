@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>World Wide Web&mdash;HTML</title>
+    <link rel="stylesheet" href="../../../lib/styles/index.css">
+    <script async src="../../../lib/scripts/index.js"></script>
+  </head>
+  <body>
+
+    <div class="slide">
+      <h1>Welcome to the Web&mdash;HTML</h1>
+    </div>
+
+    <div class="slide">
+      <h2>Concrete</h2>
+
+      <p>HTML is a lot like concrete. You need it, and you need it to be stable.</p>
+
+      <img src="images/concrete.jpg" alt="A brick of concrete">
+    </div>
+
+    <div class="slide">
+      <h2>Why HTML?</h2>
+
+      <p>HTML was created for primarily writers. The idea is you can write a couple of paragraphs of text and easily mark what you want to be in <em>italics</em> or be <strong>bold</strong>.</p>
+
+      <p>Fast forward a few years it represents entire data structures and complex page layouts.</p>
+    </div>
+
+    <div class="slide">
+      <h2>HTML is Made up of Tags</h2>
+
+      <p>This is an HTML tag. HTML code is made up of many tags.</p>
+
+      <pre>&lt;div&gt;&lt;/div&gt;</pre>
+    </div>
+
+    <div class="slide">
+      <h3>A Tag of Many Names</h3>
+
+      <p>Tags can have any name. While it is possible to assign any name, not all names are standardized.</p>
+
+      <pre>
+&lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h1&gt;&lt;/h1&gt;
+&lt;strong&gt;&lt;/strong&gt;
+
+&lt;george&gt;&lt;/george&gt;
+      </pre>
+    </div>
+
+    <div class="slide">
+      <h3>No Craziness</h3>
+
+      <p>It is important you only use tags with a standardized semantic meaning. Here is a graphic with most of the ones currently in use today.</p>
+
+      <img src="images/elements.png" alt="Periodic Table of the HTML Elements">
+    </div>
+
+    <div class="slide">
+      <h2>Need More Information!</h2>
+
+      <p>Often there are more things you will need to describe an element. So we use a set of key value pairs, we call these attributes.</p>
+
+      <p>A word, followed by another phrase in quotes represents one key and it's value. Not all attributes do not require a value though as you can see with <code>required</code>.</p>
+
+      <pre>&lt;input type=&quot;password&quot; name=&quot;verify-password&quot; required&gt;</pre>
+    </div>
+
+    <div class="slide">
+      <h2>An Identification Problem</h2>
+
+      <p>If we can only use a certain set of elements, what about when we need to define something more specific? The answer is classes.</p>
+
+      <p><code>&gt;div&lt;</code> is the most generic block level element (<code>&gt;span&lt;</code> is the most generic inline element). So when we need something specific we will start by using this element.</p>
+
+      <pre>
+&lt;div class=&quot;user&quot;&gt;
+  &lt;h1 class=&quot;user--name&quot;&gt;Sara Smith&lt;/h1&gt;
+  &lt;div class=&quot;user--joined&quot;&gt;Joined 3 months ago&lt;/div&gt;
+&lt;/div&gt;
+      </pre>
+    </div>
+
+    <div class="slide">
+      <h3>More Then One</h3>
+
+      <p>You can apply multiple classes to describe things even more specifically.</p>
+
+      <pre>&lt;div class=&quot;size-large color-red shape-circle&quot;&gt;Hello World&lt;/div&gt;</pre>
+    </div>
+
+    <div class="slide">
+      <h3>Does it Make a Difference?</h3>
+
+      <p>In vanilla HTML, classes do not change <em>anything</em>. You use classes so that your CSS and JavaScript can find these elements and add your custom styles/functionality.</p>
+    </div>
+
+    <div class="slide">
+      <h2>You Now Know HTML</h2>
+
+      <p>Congradulations! HTML is <em>incredibly</em> easy to learn, and you just did it. It might take a while to stick, but basically that's all the information you need to start making basic HTML websites.</p>
+
+      <p>Let's take a look at an <a href="https://www.codeforamerica.org/">actual website's</a> HTML for a few minutes.</p>
+    </div>
+
+    <div class="slide">
+      <h2>Some Pretty Awesome Advanced Things</h2>
+
+      <p>One thing you should remember whenever writing HTML is that you are writing things for the <em>computer to understand</em>.</p>
+
+      <p>Semantic data describes HTML that is so well written that a computer can easily interpret what the author meant. For example:</p>
+
+      <pre>
+Jane Doe
+&lt;img src=&quot;janedoe.jpg&quot; alt=&quot;Photo of Jane Joe&quot;/&gt;
+Professor
+20341 Whitworth Institute
+405 Whitworth
+Seattle WA 98052
+(425) 123-4567
+&lt;a href=&quot;mailto:jane-doe@xyz.edu&quot;&gt;jane-doe@illinois.edu&lt;/a&gt;
+Jane's home page:
+&lt;a href=&quot;http://www.janedoe.com&quot;&gt;janedoe.com&lt;/a&gt;
+Graduate students:
+&lt;a href=&quot;http://www.xyz.edu/students/alicejones.html&quot;&gt;Alice Jones&lt;/a&gt;
+&lt;a href=&quot;http://www.xyz.edu/students/bobsmith.html&quot;&gt;Bob Smith&lt;/a&gt;
+      </pre>
+
+      <p>How is the computer supposed to know what any of that text actually <em>means</em>?</p>
+    </div>
+
+    <div class="slide">
+      <h3>Much better :)</h3>
+
+      <p>Thanks to a little (ok a lot) of HTML the computer can now understand what this persons name is, or her address, or her job etc.</p>
+
+      <pre>
+&lt;div vocab=&quot;http://schema.org/&quot; typeof=&quot;Person&quot;&gt;
+  &lt;span property=&quot;name&quot;&gt;Jane Doe&lt;/span&gt;
+  &lt;img src=&quot;janedoe.jpg&quot; property=&quot;image&quot; alt=&quot;Photo of Jane Joe&quot;/&gt;
+  &lt;span property=&quot;jobTitle&quot;&gt;Professor&lt;/span&gt;
+  &lt;div property=&quot;address&quot;  typeof=&quot;PostalAddress&quot;&gt;
+    &lt;span property=&quot;streetAddress&quot;&gt;
+      20341 Whitworth Institute
+      405 N. Whitworth
+    &lt;/span&gt;
+    &lt;span property=&quot;addressLocality&quot;&gt;Seattle&lt;/span&gt;,
+    &lt;span property=&quot;addressRegion&quot;&gt;WA&lt;/span&gt;
+    &lt;span property=&quot;postalCode&quot;&gt;98052&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;span property=&quot;telephone&quot;&gt;(425) 123-4567&lt;/span&gt;
+  &lt;a href=&quot;mailto:jane-doe@xyz.edu&quot; property=&quot;email&quot;&gt;
+    jane-doe@xyz.edu&lt;/a&gt;
+  Jane's home page:
+  &lt;a href=&quot;http://www.janedoe.com&quot; property=&quot;url&quot;&gt;janedoe.com&lt;/a&gt;
+  Graduate students:
+  &lt;a href=&quot;http://www.xyz.edu/students/alicejones.html&quot; property=&quot;colleague&quot;&gt;
+    Alice Jones&lt;/a&gt;
+  &lt;a href=&quot;http://www.xyz.edu/students/bobsmith.html&quot; property=&quot;colleague&quot;&gt;
+    Bob Smith&lt;/a&gt;
+&lt;/div&gt;
+      </pre>
+    </div>
+
+    <div class="slide">
+      <h3>Thanks Semantic Markup</h3>
+
+      <p>Now the computers at Google (and similar services) can do smart things like this:</p>
+
+      <img src="images/cranston.png" alt="Bryan Cranston's Google Search Result">
+    </div>
+
+  </body>
+</html>
