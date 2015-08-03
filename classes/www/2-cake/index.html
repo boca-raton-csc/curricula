@@ -8,7 +8,7 @@
   </head>
   <body>
 
-    <div class="slide">
+    <div class="slide slide-title">
       <h1>Welcome to the Web&mdash;A Tasty Cake</h1>
     </div>
 
@@ -61,6 +61,12 @@
 
       <p>For most of this course we will use open source css libraries that manage our stylesheets for us.</p>
 
+      <p>If you want to learn CSS we will be excited to teach you, our worry is that the majority of people don't want/need CSS knowledge.</p>
+    </div>
+
+    <aside class="slide">
+      <h3>Example</h3>
+
       <pre>
 body {
   box-sizing: border-box;
@@ -73,16 +79,11 @@ body {
   min-width: 200px;
   max-width: 5000px;
   background-color: tomato;
-  color: white;
   font-family: "Comic Sans", sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.2ch;
   text-align: justify;
 }
       </pre>
-
-      <aside>If you want to learn CSS we will be excited to teach you, our worry is that the majority of people don't want/need CSS knowledge.</aside>
-    </div>
+    </aside>
 
     <div class="slide">
       <h2>JavaScript</h2>
@@ -90,33 +91,40 @@ body {
       <p>JavaScript is the programming language of the web. It is an object oriented, weak typed, functional programming language with prototypal inheritance (although classical inheritance can be faked and eventually will be implemented in ES6).</p>
 
       <p>The word JavaScript is synonymous with ECMAScript. We will be teaching ES5 (ECMAScript 5). Even though ES6/ES2015 and eventually ES7/ES2016 are the cutting edge of JavaScript development, they do not have good support in major browsers.</p>
+    </div>
+
+    <div class="slide">
+      <h3>Example</h3>
 
       <pre>
-window.onload = function () {
-  (function () {
-    // Select all elements with our utility class
-    var nodes = document.getElementsByClassName('svg-strech');
+Session.setDefault("kayla", true);
 
-    // Iterate through all the nodes
-    for (var i = 0, max = nodes.length; i < max ; i++) {
-      // Select the node at this index
-      var node = nodes.item(i);
+Template.discussion.helpers({
+  messages: function() {
+    var discussion = Zorbs.findOne(Session.get('discussionId'));
+    return discussion.messages;
+  },
 
-      // Get the parent node
-      var parentNode = node.parentNode;
+  featuredMessages: function () {
+    var discussion = Zorbs.findOne(Session.get('discussionId'));
+    var messages = discussion.messages.filter(function (message) {
+      return message.likes.length >= 2;
+    });
+    return messages;
+  },
 
-      // Get the node bounding boxes
-      var bb = node.getBBox();
-      var parentBb = node.parentNode.getBBox();
-
-      ...
+  author: function () {
+    var discussion = Zorbs.findOne(Session.get('discussionId'));
+    return Meteor.users.findOne(discussion.author);
+  }
+});
       </pre>
     </div>
 
     <div class="slide">
       <h3>A Case for JavaScript</h3>
 
-      <p>If you have any programming experience you likely have an opinion about JavaScript. Here is why we chose to teach JavaScript:</p>
+      <p>If you have any programming experience, you likely have an opinion about JavaScript. Here is why we chose to teach JavaScript over other languages:</p>
 
       <ul>
         <li>JavaScript can run no matter the operating system as long as a browser is installed.</li>
@@ -129,11 +137,11 @@ window.onload = function () {
         <li>It's fun (opinion).</li>
       </ul>
 
-      <p>More important then the language, we will be teaching you how to <em>think</em> like a computer scientist. After that you should have the tools to go and learn whatever language you want.</p>
+      <p>More important then the language is we will be teaching you how to <em>think</em> like a computer scientist. After that you should have the tools to go and learn whatever language you want.</p>
     </div>
 
-    <div class="slide">
-      <h2>What is This Server Thing All About?</h2>
+    <div class="slide slide-title">
+      <h2>Now for some yummy backend</h2>
     </div>
 
     <div class="slide">
@@ -143,7 +151,7 @@ window.onload = function () {
 
       <p>Because they are sent to your browser, anyone can see the code you write. Go to <a href="https://www.google.com/?gws_rd=ssl#q=the+computer+science+club+is+awesome!">Google</a> and open the DevTools.</p>
 
-      <p>View the source with whatever browser you are using, it is completely transparent!</p>
+      <p>View the source with whatever browser you are using, you can see <em>everything</em>! You could literally copy all that code into a file and have your own Google! Right? <strong>Wrong</strong>.</p>
     </div>
 
     <div class="slide">
@@ -162,13 +170,17 @@ window.onload = function () {
       <p>Imagine the server as your waiter at a resturaunt. The server is what gives you your "cake" of files (HTML, CSS, JavaScript).</p>
 
       <p>The client (browser) and the server communicate through another web technology HTTP.</p>
+    </div>
 
-      <h5>HTTP Request</h5>
+    <div class="slide">
+      <h5>Example</h5>
+
+      <strong>HTTP Request</strong>
       <pre>
 GET https://api.github.com/users/octocat/orgs HTTP/1.1
       </pre>
 
-      <h5>HTTP Response</h5>
+      <strong>HTTP Response</strong>
       <pre>
 HTTP/1.1 200 OK
 Server: nginx
@@ -192,15 +204,17 @@ X-Content-Type-Options: nosniff
     <div class="slide">
       <h2>Put it all together...</h2>
 
-      <ul>
-        <li><em>I click another cat link (<code>http://cats.cats/cute/kitten</code>)...</em></li>
-        <li>The browser makes an <strong>HTTP</strong> request to the <strong>Server</strong> living at <code>http://cats.cats/cute/kitten</code></li>
+      <ol>
+        <li>I click another cat link as I often do @ <code>http://cats.cute/kitten</code></li>
+        <li>The browser makes an <strong>HTTP</strong> request to the <strong>Server</strong> living at <code>http://cats.cute/kitten</code></li>
         <li>The <strong>Server</strong> sends an <strong>HTTP</strong> response <em>back</em> to the browser with the <strong>HTML</strong> of the page</li>
         <li>The <strong>HTML</strong> is recieved by the browser and parsed</li>
-        <li>Links to the <strong>CSS</strong> (<code>http://cats.com/styles.css</code>) and <strong>Javascript</strong> (<code>http://cats.com/scripts.js</code>) in the <strong>HTML</strong> are retrieved through more <strong>HTTP</strong> requests to the <strong>Server</strong></li>
+        <li>Links to the <strong>CSS</strong> (<code>http://cats.com/styles.css</code>) and <strong>Javascript</strong> (<code>http://cats.cute/scripts.js</code>) in the <strong>HTML</strong> are retrieved through more <strong>HTTP</strong> requests to the <strong>Server</strong></li>
         <li>The <strong>CSS</strong> is applied to the <strong>HTML</strong> making the page look pretty</li>
         <li>The <strong>JavaScript</strong> is executed on the <strong>HTML</strong> page, giving it functionality and making the cats go "<em>Meow!</em>"</li>
-      </ul>
+      </ol>
+
+      <p><code>&lt;/lesson&gt;</code></p>
     </div>
 
   </body>

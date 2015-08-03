@@ -8,14 +8,14 @@
   </head>
   <body>
 
-    <div class="slide">
+    <div class="slide slide-title">
       <h1>Welcome to the Web&mdash;HTML</h1>
     </div>
 
     <div class="slide">
       <h2>Concrete</h2>
 
-      <p>HTML is a lot like concrete. You need it, and you need it to be stable.</p>
+      <p>HTML is a lot like concrete. You need it, and you need it to be rock solid.</p>
 
       <img src="images/concrete.jpg" alt="A brick of concrete">
     </div>
@@ -23,9 +23,8 @@
     <div class="slide">
       <h2>Why HTML?</h2>
 
-      <p>HTML was created for primarily writers. The idea is you can write a couple of paragraphs of text and easily mark what you want to be in <em>italics</em> or be <strong>bold</strong>.</p>
-
-      <p>Fast forward a few years it represents entire data structures and complex page layouts.</p>
+      <p>HTML was created primarily for writers. The idea is you can write a couple of paragraphs of text and easily style it like this: <i>italics</i> <b>bold</b>.</p>
+      <p>Fast forward a few years and it represents entire data structures and complex page layouts. This is a reoccurring theme of the web, a technology was created to do one thing, and it ends up becoming best suited for entirely different usecase.</p>
     </div>
 
     <div class="slide">
@@ -39,7 +38,7 @@
     <div class="slide">
       <h3>A Tag of Many Names</h3>
 
-      <p>Tags can have any name. While it is possible to assign any name, not all names are standardized.</p>
+      <p>Tags can have any name. While it is possible to assign any name, only a few are standardized and officially supported by all browsers.</p>
 
       <pre>
 &lt;div&gt;&lt;/div&gt;
@@ -47,6 +46,7 @@
 &lt;h1&gt;&lt;/h1&gt;
 &lt;strong&gt;&lt;/strong&gt;
 
+Not a standardized tag!
 &lt;george&gt;&lt;/george&gt;
       </pre>
     </div>
@@ -54,17 +54,16 @@
     <div class="slide">
       <h3>No Craziness</h3>
 
-      <p>It is important you only use tags with a standardized semantic meaning. Here is a graphic with most of the ones currently in use today.</p>
+      <p>It is important you only use tags that have been standardized.</p>
 
       <img src="images/elements.png" alt="Periodic Table of the HTML Elements">
     </div>
 
     <div class="slide">
-      <h2>Need More Information!</h2>
+      <h2>Needs More Information!</h2>
 
       <p>Often there are more things you will need to describe an element. So we use a set of key value pairs, we call these attributes.</p>
-
-      <p>A word, followed by another phrase in quotes represents one key and it's value. Not all attributes do not require a value though as you can see with <code>required</code>.</p>
+      <p>A word, followed by another phrase in quotes represents one key and it's value e.g. <code>key="value"</code>. When you do not specify a value it defaults to an empty string, e.g. <code>required</code> is the same as <code>required=""</code>.</p>
 
       <pre>&lt;input type=&quot;password&quot; name=&quot;verify-password&quot; required&gt;</pre>
     </div>
@@ -73,8 +72,7 @@
       <h2>An Identification Problem</h2>
 
       <p>If we can only use a certain set of elements, what about when we need to define something more specific? The answer is classes.</p>
-
-      <p><code>&gt;div&lt;</code> is the most generic block level element (<code>&gt;span&lt;</code> is the most generic inline element). So when we need something specific we will start by using this element.</p>
+      <p><code>&lt;div&gt;</code> is the most generic block level element (<code>&lt;span&gt;</code> is the most generic inline element). So when we need something specific we will start by using a <code>div</code> element.</p>
 
       <pre>
 &lt;div class=&quot;user&quot;&gt;
@@ -111,7 +109,7 @@
 
       <p>One thing you should remember whenever writing HTML is that you are writing things for the <em>computer to understand</em>.</p>
 
-      <p>Semantic data describes HTML that is so well written that a computer can easily interpret what the author meant. For example:</p>
+      <p>Semantic data describes HTML that is written so well that a computer can easily interpret what the author meant. For example this is bad non-semantic HTML:</p>
 
       <pre>
 Jane Doe
@@ -171,6 +169,8 @@ Graduate students:
       <p>Now the computers at Google (and similar services) can do smart things like this:</p>
 
       <img src="images/cranston.png" alt="Bryan Cranston's Google Search Result">
+
+      <p><code>&lt;/lesson&gt;</code></p>
     </div>
 
   </body>
