@@ -2,12 +2,7 @@
 This is curricula and accompanying presentations designed to be used by the Boca Raton Community Highschool's Computer Science Club. While written in HTML, these presentations are not designed to be read, but rather presented with elaboration in a forum like classroom where the audience has the opportunity to ask questions and interact.
 
 ## Outline
-- World Wide Web
-  - Introduction
-  - Web Cake
-  - HTML
-  - CSS
-  - JavaScript
+See the `index.html` file for the outline
 
 ## Contributing
 All curricula is to be written in HTML, CSS, and JavaScript. No preprocessors. No servers. The curricula must also be instantly readable when opening in any browser. This is so that beginners can look through the code and understand how it works. Also so that it runs *anywhere* (even school computers).
@@ -23,4 +18,3 @@ All curricula is to be written in HTML, CSS, and JavaScript. No preprocessors. N
     - Inside each class folder are all of that class's lessons
     - Each lesson *must* be prefixed with a number. This allows for easy visual grepping of lesson progression
     - e.g. `classes/www/1-intro` stores the first lesson in the www class
-

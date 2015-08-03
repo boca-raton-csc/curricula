@@ -5,6 +5,10 @@
 }
 
 html {
+  font-size: 32px;
+}
+
+html.is-presentation {
   font-size: 4vh;
 }
 
@@ -36,6 +40,16 @@ h1 {
 h2, h3, h4, h5, h6 {
   font-size: 1.4rem;
   line-height: 1.5rem;
+}
+
+.label {
+  color: tomato;
+}
+
+.container {
+  max-width: 25rem;
+  padding: 1rem;
+  margin: 0 auto;
 }
 
 .slide {
