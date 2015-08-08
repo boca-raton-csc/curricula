@@ -25,7 +25,13 @@
       <h2>Why HTML?</h2>
 
       <p>HTML was created primarily for writers. The idea is you can write a couple of paragraphs of text and easily style it like this: <i>italics</i> <b>bold</b>.</p>
-      <p>Fast forward a few years and it represents entire data structures and complex page layouts. This is a reoccurring theme of the web, a technology was created to do one thing, and it ends up becoming best suited for entirely different usecase.</p>
+      <p>Fast forward a few years and it represents entire data structures and complex page layouts. This is a reoccurring theme of the web, a technology was created to do one thing, and it ends up becoming best suited for entirely different use case.</p>
+    </div>
+
+    <div class="slide">
+      <h2>Open up your browser!</h2>
+
+      <p>You are expected to follow along and practice, so got to <a href="http://codepen.io/pen/" target="_blank">http://codepen.io/pen/</a> and let's hack some things.</p>
     </div>
 
     <div class="slide">
@@ -61,9 +67,23 @@ Not a standardized tag!
     </div>
 
     <div class="slide">
-      <h2>Needs More Information!</h2>
+      <h3>But we can still have a little craziness...</h3>
 
-      <p>Often there are more things you will need to describe an element. So we use a set of key value pairs, we call these attributes.</p>
+      <p>Most tags will open and close (e.g. open tag: <code>&lt;p&gt;</code>, close tag: <code>&lt;/p&gt;</code>). But some will not, like the <code>&lt;img&gt;</code> tag.</p>
+      <p>Let's learn how to add images to our website, first pick your favorite image...</p>
+    </div>
+
+    <div class="slide">
+      <p>...this is mine</p>
+      <img src="http://weknowmemes.com/wp-content/uploads/2012/03/conspiracy-cat-meme.jpg" alt="A cat meme">
+      <p>Find out the image url (in this case <code>http://weknowmemes.com/wp-content/uploads/2012/03/conspiracy-cat-meme.jpg</code>) then use it like so:</p>
+      <code>&lt;img src="http://weknowmemes.com/wp-content/uploads/2012/03/conspiracy-cat-meme.jpg" alt="A cat meme"&gt;</code>
+    </div>
+
+    <div class="slide">
+      <h2>Need More Information!</h2>
+
+      <p>Often there are more things you will need to describe an element (like <code>src</code> as in <code>&lt;img src=""&gt;</code> tag). So we use a set of key value pairs, we call these attributes.</p>
       <p>A word, followed by another phrase in quotes represents one key and it's value e.g. <code>key="value"</code>. When you do not specify a value it defaults to an empty string, e.g. <code>required</code> is the same as <code>required=""</code>.</p>
 
       <pre>&lt;input type=&quot;password&quot; name=&quot;verify-password&quot; required&gt;</pre>
@@ -100,7 +120,7 @@ Not a standardized tag!
     <div class="slide">
       <h2>You Now Know HTML</h2>
 
-      <p>Congradulations! HTML is <em>incredibly</em> easy to learn, and you just did it. It might take a while to stick, but basically that's all the information you need to start making basic HTML websites.</p>
+      <p>Congratulations! HTML is <em>incredibly</em> easy to learn, and you just did it. It might take a while to stick, but basically that's all the information you need to start making basic HTML websites.</p>
 
       <p>Let's take a look at an <a href="https://www.codeforamerica.org/">actual website's</a> HTML for a few minutes.</p>
     </div>
@@ -134,7 +154,7 @@ Graduate students:
     <div class="slide">
       <h3>Much better :)</h3>
 
-      <p>Thanks to a little (ok a lot) of HTML the computer can now understand what this persons name is, or her address, or her job etc.</p>
+      <p>Thanks to a little (ok a lot) of HTML the computer can now understand what this person's name is, or her address, or her job etc.</p>
 
       <pre>
 &lt;div vocab=&quot;http://schema.org/&quot; typeof=&quot;Person&quot;&gt;

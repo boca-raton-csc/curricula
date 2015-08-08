@@ -39,6 +39,10 @@
       <p>HTML is boring. It's drab and grey like concrete. However, also like concrete HTML is the most important part of what you build because it is the foundation.</p>
 
       <p>Without good HTML it is <em>very hard to get everything else right</em>.</p>
+    </div>
+
+    <div class="slide">
+      <h3>Example</h3>
 
       <pre>
 &lt;html&gt;
@@ -47,10 +51,46 @@
     &lt;script src="script.css"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    Content
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;p&gt;
+      This is a paragraph of text written in HTML, it can be pretty &lt;strong&gt;bold&lt;/strong&gt;.
+      Below is a typical login form!
+    &lt;/p&gt;
+    &lt;form&gt;
+      &lt;div&gt;
+        &lt;label for="user-email"&gt;Email&lt;/label&gt;
+        &lt;input type="email" name="user-email"&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;label for="user-pass"&gt;Password&lt;/label&gt;
+        &lt;input type="password" name="user-pass"&gt;
+      &lt;/div&gt;
+      &lt;button type="submit"&gt;Login&lt;/button&gt;
+    &lt;/form&gt;
   &lt;/body&gt;
 &lt;/html&gt;
       </pre>
+
+      <p>And Just in case you were wondering, this is what it looks like when rendered:</p>
+
+      <div>
+        <h1>Hello, world!</h1>
+        <p>
+          This is a paragraph of text written in HTML, it can be pretty <strong>bold</strong>.
+          Below is a typical login form!
+        </p>
+        <form>
+          <div>
+            <label for="user-email">Email</label>
+            <input type="email" name="user-email">
+          </div>
+          <div>
+            <label for="user-pass">Password</label>
+            <input type="password" name="user-pass">
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
     </div>
 
     <div class="slide">
@@ -65,7 +105,7 @@
       <p>If you want to learn CSS we will be excited to teach you, our worry is that the majority of people don't want/need CSS knowledge.</p>
     </div>
 
-    <aside class="slide">
+    <div class="slide">
       <h3>Example</h3>
 
       <pre>
@@ -84,7 +124,7 @@ body {
   text-align: justify;
 }
       </pre>
-    </aside>
+    </div>
 
     <div class="slide">
       <h2>JavaScript</h2>
@@ -122,27 +162,9 @@ Template.discussion.helpers({
       </pre>
     </div>
 
-    <div class="slide">
-      <h3>A Case for JavaScript</h3>
-
-      <p>If you have any programming experience, you likely have an opinion about JavaScript. Here is why we chose to teach JavaScript over other languages:</p>
-
-      <ul>
-        <li>JavaScript can run no matter the operating system as long as a browser is installed.</li>
-        <li>Everything is an object.</li>
-        <li>Extremely flexible, can emulate syntaxes from many languages.</li>
-        <li>Weak typed programming languages are typically easier for beginners.</li>
-        <li>Constantly being updated (ES2015, ES2016).</li>
-        <li>Node.js is awesome.</li>
-        <li><strong>HUGE</strong> community of open source libraries (NPM).</li>
-        <li>It's fun (opinion).</li>
-      </ul>
-
-      <p>More important then the language is we will be teaching you how to <em>think</em> like a computer scientist. After that you should have the tools to go and learn whatever language you want.</p>
-    </div>
-
     <div class="slide slide-title">
       <h2>Now for some yummy backend</h2>
+      <p>It's like the middlest ice-cream in an ice-cream cake.</p>
     </div>
 
     <div class="slide">
